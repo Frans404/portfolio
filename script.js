@@ -1,5 +1,6 @@
 const toggle = document.getElementById('language-toggle');
 const cvLink = document.getElementById('cv-link');
+const projectDialog = document.getElementById('project-dialog');
 let translations;
 
 function setLanguage(lang) {
@@ -22,8 +23,21 @@ function setLanguage(lang) {
       el.setAttribute(name, content[key]);
     });
   });
+  if (projectDialog.open) {
+    showProjectDetails(projectDialog.dataset.activeProject);
+  }
   cvLink.href = lang === 'en' ? 'cv-en.pdf' : 'cv-sv.pdf';
   try { localStorage.setItem('portfolio-lang',lang); } catch (_) {}
+}
+
+function showProjectDetails(project) {
+  const content = translations[document.documentElement.lang];
+  document.getElementById('project-dialog-title').textContent = content[`${project}Title`];
+  document.getElementById('project-dialog-description').textContent = content[`${project}More`];
+  const link = document.getElementById('project-dialog-link');
+  link.href = content[`${project}Link`] || '';
+  link.textContent = content.projectLinkLabel;
+  link.hidden = !content[`${project}Link`];
 }
 
 async function initialize() {
@@ -34,6 +48,25 @@ async function initialize() {
   try { saved = localStorage.getItem('portfolio-lang') || (navigator.language.toLowerCase().startsWith('sv') ? 'sv' : 'en'); } catch (_) {}
   setLanguage(saved === 'sv' ? 'sv' : 'en');
   toggle.addEventListener('click',() => setLanguage(document.documentElement.lang === 'en' ? 'sv' : 'en'));
+  document.querySelectorAll('[data-project]').forEach(card => {
+    card.addEventListener('click',() => {
+      projectDialog.dataset.activeProject = card.dataset.project;
+      showProjectDetails(card.dataset.project);
+      projectDialog.showModal();
+    });
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.click();
+      }
+    });
+  });
+  projectDialog.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      projectDialog.close();
+    }
+  });
   document.getElementById('year').textContent = new Date().getFullYear();
 }
 
