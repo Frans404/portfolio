@@ -15,37 +15,73 @@
     "nameLast": "Örneholm",
     "eyebrow": "Computer Science · Uppsala, Sweden",
     "heroTitle": "Computer scientist focused on data, AI & meaningful technology.",
-    "heroCopy": "I’m a Computer Science graduate from Uppsala University. I enjoy building software, working with complex datasets and using technology to understand real-world problems.",
+    "heroCopy": {
+      "$join": [
+        "I’m a Computer Science graduate from Uppsala University.",
+        "I enjoy building software, working with complex datasets and using technology to understand real-world problems."
+      ]
+    },
     "viewProjects": "Explore projects ↗",
     "downloadCV": "Download CV ↓",
     "heroTags": ["Python", "Machine Learning", "Data Engineering", "GIS"],
     "selectedWork": "01 / Selected work",
     "projectsTitle": "Projects",
     "projectsIntro": "A selection of academic and practical projects.",
-    "p1Title": "Conflict forecasting with machine learning",
-    "p1Desc": "Bachelor's thesis exploring spatiotemporal forecasting of armed conflict using Random Forest ensembles, model optimization and statistical evaluation.",
+    "p1Title": "Bachelor's Thesis: Predicting violent conflicts at different time horizons",
+    "p1Desc": "My bachelor's thesis explored machine learning methods for forecasting armed conflicts.",
     "p1Tags": ["Python", "Random Forest", "ML", "Statistics"],
-    "p1More": "Placeholder: add more about the forecasting goals, model choices and results here.",
-    "p2Title": "Large-scale data processing",
-    "p2Desc": "Processed approximately 20 GB of JSON data with PySpark and Spark SQL, building distributed data transformations and storing results in Parquet.",
+    "p1Images": [
+      {"src": "images/Thesis/thesis%20stats.png", "alt": "Thesis model performance charts"},
+      {"src": "images/Thesis/views.png", "alt": "Views logo"}
+    ],
+    "p1More": "Conducted at: The Violence & Impacts Early-Warning System (VIEWS), an open-source project leveraging machine learning to predict armed conflict and its adverse impacts on humanitarian outcomes. https://viewsforecasting.org/\n\nMy bachelor's thesis explored machine learning methods for forecasting armed conflicts. I developed and evaluated ensemble strategies combining predictions from Random Forest models trained on different time horizons to seek to improve spatiotemporal forecasts of conflict fatalities. The project involved extensive data processing, classification, regression, hyperparameter experimentation, and statistical evaluation. I also implemented optimization methods, including genetic algorithms and Sequential Least Squares Programming (SLSQP), to determine optimal ensemble weights.\n\nBoth the genetic algorithm and SLSQP converged on similar ensemble weights, suggesting that the two optimization approaches identified comparable solutions. However, neither method improved predictive performance compared to the baseline approach of using a separate model for each forecasting horizon. The results highlighted the importance of empirical evaluation and demonstrated that more complex ensemble strategies do not necessarily lead to better predictions.\n\nTechnologies & concepts: Python, pandas, NumPy, scikit-learn, Random Forest, ensemble learning, genetic algorithms, SLSQP, time-series forecasting, classification, regression, model evaluation.",
+    "p1Links": [
+      {"label": "Read the thesis", "url": "http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A2089077"},
+      {"label": "VIEWS project", "url": "https://viewsforecasting.org/"}
+    ],
+    "p2Title": "Reddit pronoun analysis: Large-Scale Data Processing with Apache Spark",
+    "p2Desc": "A university group project exploring distributed data processing and scalability using approximately 20 GB of Reddit data containing 3.8 million posts.",
     "p2Tags": ["PySpark", "Spark SQL", "Parquet", "Data Engineering"],
-    "p2More": "Placeholder: describe the processing approach, challenges and outcomes here.",
-    "p3Title": "Q-bot — automation platform",
-    "p3Desc": "Full-stack registration automation service with a Python backend, API integration, encrypted data storage, a JavaScript frontend and Selenium automation.",
+    "p2Images": [
+      {"src": "images/data%20engineering/DE%20graph.png", "alt": "Diagram of the distributed Spark data-processing cluster"}
+    ],
+    "p2More": "A university group project exploring distributed data processing and scalability using approximately 20 GB of Reddit data containing 3.8 million posts. We built a data pipeline using Apache Spark and HDFS, converting JSON data into the more efficient Parquet format for distributed storage and analysis. Using PySpark, we analysed pronoun usage across different Reddit communities.\n\nA major focus was evaluating horizontal and vertical scaling by benchmarking different configurations of worker nodes, CPU cores, and memory. By optimizing resource allocation and parallel processing, we achieved approximately 5.8× faster execution compared to our baseline configuration. The project provided practical experience with distributed computing, data pipelines, performance benchmarking, and the trade-offs involved in designing scalable systems.\n\nTechnologies & concepts: Python, PySpark, Apache Spark, HDFS, Hadoop, Parquet, JSON, ETL, distributed computing, horizontal and vertical scaling, parallel processing, performance optimization.",
+    "p2Links": [
+      {"label": "View on GitHub", "url": "https://github.com/UberConMan/data_engineering_project"}
+    ],
+    "p4Title": "Pop-Cornbot: AI-Powered Movie Recommendations",
+    "p3Desc": "A fullstack application designed to automate registration and account management across Swedish housing queue websites.",
     "p3Tags": ["Python", "JavaScript", "REST API", "Selenium"],
-    "p3More": "Placeholder: add more about the service, implementation and user workflow here.",
-    "p4Title": "Pop-corn bot — interactive AI",
-    "p4Desc": "Interactive movie recommendation system combining machine learning, a Furhat social robot, voice interaction and an integrated large language model.",
+    "p3Images": [
+      {"src": "images/qbot/qbot.png", "alt": "Q-bot registration and housing-queue interface"}
+    ],
+    "p4More": "A group project developing an interactive movie recommendation system using a Furhat social robot. The application combined a custom-trained facial emotion recognition model, speech interaction, and Google's Gemini large language model to recommend movies based on users' interests and emotional state. I worked on the Python backend and LLM integration, enabling dynamic conversations and classification of user inputs. The project explored how machine learning and generative AI can be integrated into interactive applications.\n\nTechnologies & concepts: Python, Google Gemini API, LLM integration, machine learning, computer vision, emotion classification, Furhat Robotics, speech recognition, human-computer interaction.",
+    "p4Links": [
+      {"label": "View on GitHub", "url": "https://github.com/FayazSaiedi/Popcorn-bot"}
+    ],
+    "p3Title": "Q-bot: Automated Housing Queue Registration",
+    "p4Desc": "A group project developing an interactive movie recommendation system using a Furhat social robot.",
     "p4Tags": ["Python", "LLM", "Furhat", "AI"],
-    "p4More": "Placeholder: describe the recommendation flow, interaction design and project outcome here.",
-    "p5Title": "Uppsala Restaurants Map",
-    "p5Desc": "Placeholder: add a short introduction to the Uppsala Restaurants Map project here.",
+    "p4Images": [
+      {"src": "images/popcornbot/popcornbot.png", "alt": "Pop-corn bot interacting with a Furhat robot"}
+    ],
+    "p3More": "A fullstack application designed to automate registration and account management across Swedish housing queue websites. The system featured a Python backend, an HTML/JavaScript frontend, API communication, and a database with encrypted storage of user information. Selenium was used to automate interactions with external websites, while multithreading enabled concurrent execution of independent tasks. The project covered the full software development process, from requirements and interface design to implementation and testing.\n\nTechnologies & concepts: Python, JavaScript, HTML, Selenium, REST APIs, databases, encryption, multithreading, web automation, fullstack development.",
+    "p3Links": [
+      {"label": "View on GitHub", "url": "https://github.com/Operating-systems-katniss/Katniss"}
+    ],
+    "p5Title": "Uppsala Restaurants Map (ongoing)",
+    "p5Desc": "An ongoing personal project exploring geographic data integration and interactive web visualization through a map of restaurants in Uppsala.",
     "p5Tags": ["Maps", "Restaurants", "Uppsala"],
-    "p5More": "Placeholder: describe the map data, features and how people can explore restaurants in Uppsala.",
-    "p5Link": "https://example.com/uppsala-restaurants-map",
-    "projectLinkLabel": "Example project link (replace URL)",
+    "p5Images": [
+      {"src": "images/restaurantsmap/restaurantsmap.png", "alt": "Interactive map of restaurants in Uppsala"}
+    ],
+    "p5More": "An ongoing personal project exploring geographic data integration and interactive web visualization through a map of restaurants in Uppsala. The website provides a practical environment for experimenting with geospatial data, frontend development, and interactive user interfaces. It also serves as a way for me to explore modern AI-assisted software development workflows, version control, and web deployment.\n\nTechnologies & concepts: Codex, JavaScript, HTML, CSS, GIS, geospatial data, interactive maps, data integration, Git, GitHub Pages, AI-assisted development.",
+    "p5Links": [
+      {"label": "View on GitHub", "url": "https://github.com/Frans404/Uppsala-restaurants-map"},
+      {"label": "Open the live map", "url": "https://frans404.github.io/Uppsala-restaurants-map/"}
+    ],
     "projectDialogClose": "Close project details",
-    "projectNote": "Some expanded project details and links are placeholders.",
+    "projectNote": "Explore each project for more details, thesis links, repositories, and live demos.",
     "toolkit": "02 / Toolkit",
     "skillsTitle": "Technical skills",
     "languages": "Languages",
@@ -59,7 +95,14 @@
     "background": "03 / Background",
     "aboutTitle": "About me",
     "aboutLead": "Curious about the intersection of technology, research and society.",
-    "aboutText": "My academic background combines computer science with master's-level studies in AI and machine learning, introductory GIS and economics. Before moving into tech, I worked in healthcare and support services. I bring that experience and a strong interest in socially useful applications to my work.",
+    "aboutText": {
+      "$join": [
+        "My academic background combines computer science with master's-level studies",
+        "in AI and machine learning, introductory GIS and economics.",
+        "Before moving into tech, I worked in healthcare and support services.",
+        "I bring that experience and a strong interest in socially useful applications to my work."
+      ]
+    },
     "educationDates": "2023–2026",
     "educationTitle": "BSc, Computer Science",
     "educationPlace": "Uppsala University · AI, ML and data engineering",
@@ -80,7 +123,12 @@
     "gisPlace": "University of Gothenburg",
     "getInTouch": "04 / Get in touch",
     "contactTitle": "Let's connect.",
-    "contactDesc": "Interested in collaborating or discussing an opportunity? I'd be happy to hear from you.",
+    "contactDesc": {
+      "$join": [
+        "Interested in collaborating or discussing an opportunity?",
+        "I'd be happy to hear from you."
+      ]
+    },
     "emailMe": "Email me ↗",
     "linkedin": "LinkedIn ↗",
     "github": "GitHub ↗",
@@ -103,37 +151,73 @@
     "nameLast": "Örneholm",
     "eyebrow": "Datavetenskap · Uppsala, Sverige",
     "heroTitle": "Datavetare med fokus på data, AI och samhällsnyttig teknik.",
-    "heroCopy": "Jag är utbildad datavetare från Uppsala universitet. Jag tycker om att utveckla programvara, arbeta med komplexa datamängder och använda teknik för att förstå verkliga problem.",
+    "heroCopy": {
+      "$join": [
+        "Jag är utbildad datavetare från Uppsala universitet.",
+        "Jag tycker om att utveckla programvara, arbeta med komplexa datamängder och använda teknik för att förstå verkliga problem."
+      ]
+    },
     "viewProjects": "Se projekt ↗",
     "downloadCV": "Ladda ner CV ↓",
     "heroTags": ["Python", "Maskininlärning", "Data engineering", "GIS"],
     "selectedWork": "01 / Utvalda arbeten",
     "projectsTitle": "Projekt",
     "projectsIntro": "Ett urval av akademiska och praktiska projekt.",
-    "p1Title": "Prognoser av väpnade konflikter med maskininlärning",
-    "p1Desc": "Kandidatarbete om spatiotemporala prognoser av väpnade konflikter med ensembler av Random Forest-modeller, modelloptimering och statistisk utvärdering.",
+    "p1Title": "Bachelor's Thesis: Predicting violent conflicts at different time horizons",
+    "p1Desc": "My bachelor's thesis explored machine learning methods for forecasting armed conflicts.",
     "p1Tags": ["Python", "Random Forest", "ML", "Statistik"],
-    "p1More": "Platshållare: lägg till mer om prognosernas mål, modellval och resultat här.",
-    "p2Title": "Storskalig databehandling",
-    "p2Desc": "Bearbetning av cirka 20 GB JSON-data med PySpark och Spark SQL, distribuerade transformationer och lagring i Parquet.",
+    "p1Images": [
+      {"src": "images/Thesis/thesis%20stats.png", "alt": "Diagram över avhandlingens modellresultat"},
+      {"src": "images/Thesis/views.png", "alt": "Logotypen Views"}
+    ],
+    "p1More": "Conducted at: The Violence & Impacts Early-Warning System (VIEWS), an open-source project leveraging machine learning to predict armed conflict and its adverse impacts on humanitarian outcomes. https://viewsforecasting.org/\n\nMy bachelor's thesis explored machine learning methods for forecasting armed conflicts. I developed and evaluated ensemble strategies combining predictions from Random Forest models trained on different time horizons to seek to improve spatiotemporal forecasts of conflict fatalities. The project involved extensive data processing, classification, regression, hyperparameter experimentation, and statistical evaluation. I also implemented optimization methods, including genetic algorithms and Sequential Least Squares Programming (SLSQP), to determine optimal ensemble weights.\n\nBoth the genetic algorithm and SLSQP converged on similar ensemble weights, suggesting that the two optimization approaches identified comparable solutions. However, neither method improved predictive performance compared to the baseline approach of using a separate model for each forecasting horizon. The results highlighted the importance of empirical evaluation and demonstrated that more complex ensemble strategies do not necessarily lead to better predictions.\n\nTechnologies & concepts: Python, pandas, NumPy, scikit-learn, Random Forest, ensemble learning, genetic algorithms, SLSQP, time-series forecasting, classification, regression, model evaluation.",
+    "p1Links": [
+      {"label": "Läs uppsatsen", "url": "http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A2089077"},
+      {"label": "VIEWS-projektet", "url": "https://viewsforecasting.org/"}
+    ],
+    "p2Title": "Reddit pronoun analysis: Large-Scale Data Processing with Apache Spark",
+    "p2Desc": "A university group project exploring distributed data processing and scalability using approximately 20 GB of Reddit data containing 3.8 million posts.",
     "p2Tags": ["PySpark", "Spark SQL", "Parquet", "Data engineering"],
-    "p2More": "Platshållare: beskriv bearbetningen, utmaningarna och resultaten här.",
-    "p3Title": "Q-bot — automatiseringstjänst",
-    "p3Desc": "Fullstacktjänst för automatiserad registrering med Python-backend, API-integration, krypterad datalagring, JavaScript-frontend och Selenium.",
+    "p2Images": [
+      {"src": "images/data%20engineering/DE%20graph.png", "alt": "Diagram över ett distribuerat Spark-kluster för databearbetning"}
+    ],
+    "p2More": "A university group project exploring distributed data processing and scalability using approximately 20 GB of Reddit data containing 3.8 million posts. We built a data pipeline using Apache Spark and HDFS, converting JSON data into the more efficient Parquet format for distributed storage and analysis. Using PySpark, we analysed pronoun usage across different Reddit communities.\n\nA major focus was evaluating horizontal and vertical scaling by benchmarking different configurations of worker nodes, CPU cores, and memory. By optimizing resource allocation and parallel processing, we achieved approximately 5.8× faster execution compared to our baseline configuration. The project provided practical experience with distributed computing, data pipelines, performance benchmarking, and the trade-offs involved in designing scalable systems.\n\nTechnologies & concepts: Python, PySpark, Apache Spark, HDFS, Hadoop, Parquet, JSON, ETL, distributed computing, horizontal and vertical scaling, parallel processing, performance optimization.",
+    "p2Links": [
+      {"label": "Visa på GitHub", "url": "https://github.com/UberConMan/data_engineering_project"}
+    ],
+    "p4Title": "Pop-Cornbot: AI-Powered Movie Recommendations",
+    "p3Desc": "A fullstack application designed to automate registration and account management across Swedish housing queue websites.",
     "p3Tags": ["Python", "JavaScript", "REST API", "Selenium"],
-    "p3More": "Platshållare: lägg till mer om tjänsten, implementationen och användarflödet här.",
-    "p4Title": "Pop-corn bot — interaktiv AI",
-    "p4Desc": "Interaktiv filmrekommendationstjänst som kombinerar maskininlärning, den sociala roboten Furhat, röstinteraktion och en integrerad språkmodell.",
+    "p3Images": [
+      {"src": "images/qbot/qbot.png", "alt": "Q-bots gränssnitt för registrering och bostadsköer"}
+    ],
+    "p4More": "A group project developing an interactive movie recommendation system using a Furhat social robot. The application combined a custom-trained facial emotion recognition model, speech interaction, and Google's Gemini large language model to recommend movies based on users' interests and emotional state. I worked on the Python backend and LLM integration, enabling dynamic conversations and classification of user inputs. The project explored how machine learning and generative AI can be integrated into interactive applications.\n\nTechnologies & concepts: Python, Google Gemini API, LLM integration, machine learning, computer vision, emotion classification, Furhat Robotics, speech recognition, human-computer interaction.",
+    "p4Links": [
+      {"label": "Visa på GitHub", "url": "https://github.com/FayazSaiedi/Popcorn-bot"}
+    ],
+    "p3Title": "Q-bot: Automated Housing Queue Registration",
+    "p4Desc": "A group project developing an interactive movie recommendation system using a Furhat social robot.",
     "p4Tags": ["Python", "LLM", "Furhat", "AI"],
-    "p4More": "Platshållare: beskriv rekommendationsflödet, interaktionen och projektets resultat här.",
-    "p5Title": "Uppsala Restaurants Map",
-    "p5Desc": "Platshållare: lägg till en kort introduktion till projektet Uppsala Restaurants Map här.",
+    "p4Images": [
+      {"src": "images/popcornbot/popcornbot.png", "alt": "Pop-corn bot interagerar med en Furhat-robot"}
+    ],
+    "p3More": "A fullstack application designed to automate registration and account management across Swedish housing queue websites. The system featured a Python backend, an HTML/JavaScript frontend, API communication, and a database with encrypted storage of user information. Selenium was used to automate interactions with external websites, while multithreading enabled concurrent execution of independent tasks. The project covered the full software development process, from requirements and interface design to implementation and testing.\n\nTechnologies & concepts: Python, JavaScript, HTML, Selenium, REST APIs, databases, encryption, multithreading, web automation, fullstack development.",
+    "p3Links": [
+      {"label": "Visa på GitHub", "url": "https://github.com/Operating-systems-katniss/Katniss"}
+    ],
+    "p5Title": "Uppsala Restaurants Map (ongoing)",
+    "p5Desc": "An ongoing personal project exploring geographic data integration and interactive web visualization through a map of restaurants in Uppsala.",
     "p5Tags": ["Kartor", "Restauranger", "Uppsala"],
-    "p5More": "Platshållare: beskriv kartdata, funktioner och hur man kan utforska restauranger i Uppsala.",
-    "p5Link": "https://example.com/uppsala-restaurants-map",
-    "projectLinkLabel": "Exempel på projektlänk (byt URL)",
+    "p5Images": [
+      {"src": "images/restaurantsmap/restaurantsmap.png", "alt": "Interaktiv restaurangkarta över Uppsala"}
+    ],
+    "p5More": "An ongoing personal project exploring geographic data integration and interactive web visualization through a map of restaurants in Uppsala. The website provides a practical environment for experimenting with geospatial data, frontend development, and interactive user interfaces. It also serves as a way for me to explore modern AI-assisted software development workflows, version control, and web deployment.\n\nTechnologies & concepts: Codex, JavaScript, HTML, CSS, GIS, geospatial data, interactive maps, data integration, Git, GitHub Pages, AI-assisted development.",
+    "p5Links": [
+      {"label": "Visa på GitHub", "url": "https://github.com/Frans404/Uppsala-restaurants-map"},
+      {"label": "Öppna den publicerade kartan", "url": "https://frans404.github.io/Uppsala-restaurants-map/"}
+    ],
     "projectDialogClose": "Stäng projektinformation",
-    "projectNote": "Vissa utökade projektbeskrivningar och länkar är platshållare.",
+    "projectNote": "Öppna ett projekt för mer information, uppsatslänkar, kod och demonstrationer.",
     "toolkit": "02 / Verktygslåda",
     "skillsTitle": "Tekniska kompetenser",
     "languages": "Programmeringsspråk",
@@ -147,7 +231,14 @@
     "background": "03 / Bakgrund",
     "aboutTitle": "Om mig",
     "aboutLead": "Nyfiken på mötet mellan teknik, forskning och samhälle.",
-    "aboutText": "Min utbildning kombinerar datavetenskap med kurser på masternivå inom AI och maskininlärning, introduktion till GIS och nationalekonomi. Innan jag började arbeta med teknik hade jag erfarenhet från vård och omsorg. Jag tar med mig den erfarenheten och ett starkt intresse för samhällsnyttiga tillämpningar.",
+    "aboutText": {
+      "$join": [
+        "Min utbildning kombinerar datavetenskap med kurser på masternivå inom AI",
+        "och maskininlärning, introduktion till GIS och nationalekonomi.",
+        "Innan jag började arbeta med teknik hade jag erfarenhet från vård och omsorg.",
+        "Jag tar med mig den erfarenheten och ett starkt intresse för samhällsnyttiga tillämpningar."
+      ]
+    },
     "educationDates": "2023–2026",
     "educationTitle": "Kandidatexamen i datavetenskap",
     "educationPlace": "Uppsala universitet · AI, ML och data engineering",
@@ -168,7 +259,12 @@
     "gisPlace": "Göteborgs universitet",
     "getInTouch": "04 / Kontakt",
     "contactTitle": "Hör gärna av dig.",
-    "contactDesc": "Vill du samarbeta eller diskutera en tjänst? Jag berättar gärna mer.",
+    "contactDesc": {
+      "$join": [
+        "Vill du samarbeta eller diskutera en tjänst?",
+        "Jag berättar gärna mer."
+      ]
+    },
     "emailMe": "Mejla mig ↗",
     "linkedin": "LinkedIn ↗",
     "github": "GitHub ↗",

@@ -1,0 +1,52 @@
+1. Bachelor's Thesis: Predicting violent conflicts at different time horizons
+
+MACHINE LEARNING · RESEARCH · DATA SCIENCE
+Thesis: http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A2089077
+Conducted at: The Violence & Impacts Early-Warning System (VIEWS), an open-source project leveraging machine learning to predict armed conflict and its adverse impacts on humanitarian outcomes. https://viewsforecasting.org/
+My bachelor's thesis explored machine learning methods for forecasting armed conflicts. I developed and evaluated ensemble strategies combining predictions from Random Forest models trained on different time horizons to seek to improve spatiotemporal forecasts of conflict fatalities. The project involved extensive data processing, classification, regression, hyperparameter experimentation, and statistical evaluation. I also implemented optimization methods, including genetic algorithms and Sequential Least Squares Programming (SLSQP), to determine optimal ensemble weights.
+
+Both the genetic algorithm and SLSQP converged on similar ensemble weights, suggesting that the two optimization approaches identified comparable solutions. However, neither method improved predictive performance compared to the baseline approach of using a separate model for each forecasting horizon. The results highlighted the importance of empirical evaluation and demonstrated that more complex ensemble strategies do not necessarily lead to better predictions.
+
+
+**Technologies & concepts:** Python, pandas, NumPy, scikit-learn, Random Forest, ensemble learning, genetic algorithms, SLSQP, time-series forecasting, classification, regression, model evaluation.
+:::
+Reddit pronoun analysis: Large-Scale Data Processing with Apache Spark
+
+Github:
+https://github.com/UberConMan/data_engineering_project
+A university group project exploring distributed data processing and scalability using approximately 20 GB of Reddit data containing 3.8 million posts. We built a data pipeline using Apache Spark and HDFS, converting JSON data into the more efficient Parquet format for distributed storage and analysis. Using PySpark, we analysed pronoun usage across different Reddit communities.
+A major focus was evaluating horizontal and vertical scaling by benchmarking different configurations of worker nodes, CPU cores, and memory. By optimizing resource allocation and parallel processing, we achieved approximately 5.8× faster execution compared to our baseline configuration. The project provided practical experience with distributed computing, data pipelines, performance benchmarking, and the trade-offs involved in designing scalable systems.
+Technologies & concepts: Python, PySpark, Apache Spark, HDFS, Hadoop, Parquet, JSON, ETL, distributed computing, horizontal and vertical scaling, parallel processing, performance optimization.
+
+3. Pop-Cornbot: AI-Powered Movie Recommendations
+
+Github: https://github.com/FayazSaiedi/Popcorn-bot
+ARTIFICIAL INTELLIGENCE · HUMAN-COMPUTER INTERACTION
+:::writing{variant="standard" id="58323"}
+A group project developing an interactive movie recommendation system using a Furhat social robot. The application combined a custom-trained facial emotion recognition model, speech interaction, and Google's Gemini large language model to recommend movies based on users' interests and emotional state. I worked on the Python backend and LLM integration, enabling dynamic conversations and classification of user inputs. The project explored how machine learning and generative AI can be integrated into interactive applications.
+
+**Technologies & concepts:** Python, Google Gemini API, LLM integration, machine learning, computer vision, emotion classification, Furhat Robotics, speech recognition, human-computer interaction.
+
+
+:::
+4. Q-bot: Automated Housing Queue Registration
+FULLSTACK DEVELOPMENT · WEB AUTOMATION
+Github: https://github.com/Operating-systems-katniss/Katniss
+
+
+:::writing{variant="standard" id="58324"}
+A fullstack application designed to automate registration and account management across Swedish housing queue websites. The system featured a Python backend, an HTML/JavaScript frontend, API communication, and a database with encrypted storage of user information. Selenium was used to automate interactions with external websites, while multithreading enabled concurrent execution of independent tasks. The project covered the full software development process, from requirements and interface design to implementation and testing.
+
+**Technologies & concepts:** Python, JavaScript, HTML, Selenium, REST APIs, databases, encryption, multithreading, web automation, fullstack development.
+:::
+5. Uppsala Restaurants Map (ongoing)
+Github: https://github.com/Frans404/Uppsala-restaurants-map
+Website: https://frans404.github.io/Uppsala-restaurants-map/
+
+GIS · WEB DEVELOPMENT · DATA VISUALIZATION
+
+:::writing{variant="standard" id="58325"}
+An ongoing personal project exploring geographic data integration and interactive web visualization through a map of restaurants in Uppsala. The website provides a practical environment for experimenting with geospatial data, frontend development, and interactive user interfaces. It also serves as a way for me to explore modern AI-assisted software development workflows, version control, and web deployment.
+
+**Technologies & concepts:** Codex, JavaScript, HTML, CSS, GIS, geospatial data, interactive maps, data integration, Git, GitHub Pages, AI-assisted development.
+:::
